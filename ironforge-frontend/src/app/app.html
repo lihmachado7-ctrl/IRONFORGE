@@ -1,40 +1,43 @@
 <div style="text-align: center; font-family: Arial, sans-serif; margin-top: 40px; padding: 20px;">
-  <header style="background-color: #1a1a1a; padding: 20px; border-radius: 10px; color: white; margin-bottom: 30px;">
-    <h1 style="color: #ff5722; font-size: 38px; margin: 0; letter-spacing: 2px;">🏋️‍♂️ IRONFORGE FRONTEND 🏋️‍♂️</h1>
-    <p style="font-size: 16px; color: #bbb; margin: 5px 0 0 0;">Technical Evidence - Cloud Application & Service
-      Programming</p>
-  </header>
+
+  <div style="background-color: #111; color: #ff5500; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+    <h1>🏋️‍♂️ IRONFORGE FRONTEND 🏋️‍♂️</h1>
+    <p>Technical Evidence - Cloud Application & Service Programming</p>
+  </div>
 
   <div
-    style="background-color: #f9f9f9; padding: 20px; display: inline-block; border-radius: 8px; border: 1px solid #e0e0e0; width: 80%; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-    <h3 style="margin-top: 0; color: #333;">🔗 Estado de Ejecución del Sistema</h3>
+    style="background-color: #f4f4f4; border: 2px solid #ff5500; border-radius: 8px; max-width: 500px; margin: 0 auto 30px auto; padding: 20px; text-align: left;">
+    <h3 style="color: #333; text-align: center; margin-top: 0;">📝 Captura de Información (CRUD)</h3>
 
-    <div style="text-align: left; margin: 15px auto; width: 90%;">
-      <p style="font-size: 16px; margin: 8px 0;"><strong>Frontend (Angular):</strong> <span
-          style="color: green; font-weight: bold;">🟢 Corriendo en http://localhost:4200</span></p>
-      <p style="font-size: 16px; margin: 8px 0;"><strong>Backend API (Node.js):</strong> <span
-          style="color: #007bff; font-weight: bold;">🔵 Escuchando en puerto 10000</span></p>
-      <p style="font-size: 16px; margin: 8px 0;"><strong>Base de Datos:</strong> <span
-          style="color: #28a745; font-weight: bold;">🟢 MongoDB (ironforge_db) Conectada</span></p>
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #555;">Nombre del Registro:</label>
+      <input type="text" [(ngModel)]="nombreProducto" name="nombre" placeholder="Ej. Mancuerna Maciza"
+        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #555;">Detalle / Descripción:</label>
+      <input type="text" [(ngModel)]="detalleProducto" name="descripcion" placeholder="Ej. Enviando datos..."
+        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+    </div>
+
+    <button (click)="enviarDatosDesdeWeb()"
+      style="background-color: #ff5500; color: white; border: none; padding: 10px 15px; font-weight: bold; width: 100%; border-radius: 4px; cursor: pointer;">
+      💾 Guardar en Base de Datos
+    </button>
+
+    <div id="mensajeExito"
+      style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 4px; text-align: center; font-weight: bold;">
+      🟢 ¡Datos guardados exitosamente en MongoDB!
     </div>
   </div>
 
-  <div style="margin-top: 40px;">
-    <h3 style="color: #222;">📋 Módulos Detectados en el Ecosistema</h3>
-    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px;">
-      <div style="background: #fff8f5; border: 1px solid #ffdbc2; padding: 15px; border-radius: 6px; width: 150px;">
-        <strong style="color: #ff5722;">📦 Inventario</strong>
-        <p style="font-size: 12px; margin: 5px 0 0 0; color: #666;">productos_maquinas</p>
-      </div>
-      <div style="background: #fff8f5; border: 1px solid #ffdbc2; padding: 15px; border-radius: 6px; width: 150px;">
-        <strong style="color: #ff5722;">🛒 Ventas</strong>
-        <p style="font-size: 12px; margin: 5px 0 0 0; color: #666;">pedidos</p>
-      </div>
-      <div style="background: #fff8f5; border: 1px solid #ffdbc2; padding: 15px; border-radius: 6px; width: 150px;">
-        <strong style="color: #ff5722;">👥 Usuarios</strong>
-        <p style="font-size: 12px; margin: 5px 0 0 0; color: #666;">clientes</p>
-      </div>
-    </div>
+  <div
+    style="background-color: #faf8f5; border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+    <h3>🔗 Estado de Ejecución del Sistema</h3>
+    <p>Frontend (Angular): 🟢 Corriendo en http://localhost:4300</p>
+    <p>Backend API (Node.js): 🔵 Escuchando en puerto 10000</p>
+    <p>Base de Datos: 🟢 MongoDB (sena_api) Conectada</p>
   </div>
+
 </div>
-
